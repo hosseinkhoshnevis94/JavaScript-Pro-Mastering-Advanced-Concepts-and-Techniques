@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+// function Person (name,family){
+//     this.name = name
+//     this.famlily=  family
+//     this.s=function(){
+//         return this.name
+//     }
+// }
+
+// class Person{
+//     constructor(name,family){
+//         this.name = name
+//         this.family=family
+//     }
+//     s(){
+//         return this.name
+//     }
+// }
+function Person(name){
+    this.name = name
+
+}
+Person.prototype.sayHi = function(){
+    console.log('hi');
+
+}
+const p1 = new Person('H','KH')
+const p2 = new Person('Z','T')
+
+console.log(p1.sayHi == p2.sayHi);
+
+
+      
+        
+            </script>
+</body>
+</html>

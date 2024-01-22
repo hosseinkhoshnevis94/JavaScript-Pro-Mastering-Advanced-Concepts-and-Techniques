@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<y>
+    <meta charget="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+class Circle{
+     
+    static AllowedColors = new Set(['red','blue','green','yellow','pink'])
+    #r
+    #color
+    thickness = 2
+    h = 10
+    constructor(r,color){
+        this.#r =r
+        this.setColor(color)
+    }
+    setColor(newColor){
+        if(!Circle.AllowedColors.has(newColor)) throw new Error('Not Allowed Color!')
+        this.#color= newColor
+
+    }
+    #sayHi(){
+        console.log('hi');
+    }
+    get d(){
+        return this.#r*2
+    }
+    get color (){
+        return this.#color 
+    }
+    set color(newColor){
+        this.setColor(newColor)
+    }
+}
+const c1 = new Circle(5,'red')
+
+
+c1.color = 'blue'
+console.log(c1.h);
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+</boy>
+</html>

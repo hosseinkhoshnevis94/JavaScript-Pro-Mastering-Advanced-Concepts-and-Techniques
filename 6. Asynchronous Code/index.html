@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Async JS</title>
+</head>
+
+<body>
+  <button id="btn">Click Me</button>
+  <!-- <script src="app.js"></script> -->
+  <script>
+const f = [
+  fetch('https://jsonplaceholder.typicode.com/users/1'),
+  fetch('https://jsoasdfsadfypicode.com/users/3'),
+  fetch('https://jsonplaceholder.typicode.com/users/4'),
+  fetch('https://jsonplaceholdasdficode.com/users/5'),
+]
+
+Promise.allSettled(f)
+.then(res=>{
+ res.map(r=>{
+  if(r.status!=='fulfilled'){
+    console.log(r.reason);
+  }
+ })
+})
+.catch((e)=>{
+  console.log(e)
+})
+
+
+  </script>
+</body>
+
+
+
+
+
+
+</html>
